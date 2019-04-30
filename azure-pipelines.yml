@@ -16,3 +16,4 @@ steps:
     sqAnalysisEnabled: true
     checkstyleAnalysisEnabled: true
     findbugsAnalysisEnabled: true
+    
