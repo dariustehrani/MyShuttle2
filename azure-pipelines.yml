@@ -10,14 +10,9 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- task: Gradle@2
+- task: Maven@3
   inputs:
-    workingDirectory: ''
-    gradleWrapperFile: 'gradle/gradlew'
-    gradleOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: false
-    testResultsFiles: '**/TEST-*.xml'
-    tasks: 'build'
+    mavenPOMFile: 'pom.xml'
+    sqAnalysisEnabled: true
+    checkstyleAnalysisEnabled: true
+    findbugsAnalysisEnabled: true
